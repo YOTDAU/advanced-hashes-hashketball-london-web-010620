@@ -234,4 +234,11 @@ def most_points_scored
   mvp 
 end
     
+
+def winning_team
+  points = 0 
+  winners = ""
   
+  game_hash.each do |place, team|
+    team_total = 0 
+    
