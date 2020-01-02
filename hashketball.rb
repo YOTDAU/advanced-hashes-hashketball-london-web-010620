@@ -253,7 +253,7 @@ def winning_team
       end
     end
   end
-  winners
+  winners, points = team_name, team_total if team_total > points
 end
 
     
