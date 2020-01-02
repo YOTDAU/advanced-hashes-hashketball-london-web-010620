@@ -241,4 +241,20 @@ def winning_team
   
   game_hash.each do |place, team|
     team_total = 0 
+    team_name = team[place][:team_name]
+    team.each do |attribute, data|
+      if attribute == :players
+        data.each do |player|
+          team_total += player[:points]
+        end
+      end
+      if team_total > points
+        points = team_total
+      end
+    end
+  end
+  winners
+end
+
+    
     
