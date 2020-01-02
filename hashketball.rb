@@ -241,7 +241,7 @@ def winning_team
   
   game_hash.each do |place, team|
     team_total = 0 
-    team_name = team[place][:team_name]
+    team_name = game_hash[place][:team_name]
     team.each do |attribute, data|
       if attribute == :players
         data.each do |player|
