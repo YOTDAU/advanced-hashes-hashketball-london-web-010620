@@ -177,4 +177,22 @@ numbers
 end
 
 def player_stats(player_name)
+  stats_hash = {}
+  game_hash.each do |place, team|
+    team.each do |attribute, data|
+      if attribute == :player
+        data.each do |player|
+          if player[:player_name] == player_name
+            stats_hash = player.delete_if do |key, value|
+              key == :player_name
+            end
+          end
+        end
+      end
+    end
+  end
+  stats_hash
+end
+
+        
   
