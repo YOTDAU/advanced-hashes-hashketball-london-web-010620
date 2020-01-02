@@ -214,5 +214,11 @@ def big_shoe_rebounds
   rebounds
 end
 
-
+def most_points_scored
+  points = 0 
+  mvp = ""
+  
+  game_hash.each do |place, team|
+    team_points = 0 
+    
   
