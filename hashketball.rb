@@ -194,7 +194,7 @@ def player_stats(player_name)
   stats_hash
 end
 
-def big_shoe_rebounds
+def big_shoe_rebounds(player_name)
   big_feet = 0 
   rebounds = 0 
   
